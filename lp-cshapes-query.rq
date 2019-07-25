@@ -1,6 +1,5 @@
 #+ endpoint: https://api.druid.datalegend.net/datasets/nlgis/cshapes/services/cshapes/sparql Auto-selected
 #+ summary: retrieves the variables from CSHAPES in Linked Places tsv format
-#+ method: GET
 #+ pagination: 100
 #+ tags:
 #+   - country level
