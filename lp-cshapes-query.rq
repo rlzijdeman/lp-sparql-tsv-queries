@@ -1,0 +1,34 @@
+#+ endpoint: https://api.druid.datalegend.net/datasets/nlgis/cshapes/services/cshapes/sparql Auto-selected
+#+ summary: retrieves the variables from CSHAPES in Linked Places tsv format
+#+ method: GET
+#+ pagination: 100
+#+ tags:
+#+   - WHGazetteer
+#+   - Linked Places
+#+   - CSHAPES
+#+   - druid.daalegend.net
+
+# for format see: https://github.com/LinkedPasts/linked-places/blob/master/tsv.md
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX iisgv: <https://iisg.amsterdam/vocab/>
+PREFIX iisgd: <https://iisg.amsterdam/dataset/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?id ?countryLabel ?source ?ccodes ?min ?max WHERE {
+  
+  # MUST-HAVE VARIABLES
+  ?id rdf:type iisgv:CountrySlice .
+  ?id rdfs:label ?countryLabel .
+  iisgd:cshapes foaf:page ?source .
+
+  # OPTIONAL VARIABLES
+  ?id iisgv:isoAlpha2 ?ccodes .
+  ?id iisgv:cowStart ?min .
+  ?id iisgv:cowEnd ?max .
+  
+  # FILTER regex(str(?countryLabel), "^N", "i")
+  # FILTER (?startCountry > "1990-01-01"^^xsd:date) # remove the '#' at the start of the line to filter on >1990
+} LIMIT 10
