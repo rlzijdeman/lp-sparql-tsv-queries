@@ -31,4 +31,4 @@ SELECT ?id ?countryLabel ?source ?ccodes ?min ?max WHERE {
   
   # FILTER regex(str(?countryLabel), "^N", "i")
   # FILTER (?startCountry > "1990-01-01"^^xsd:date) # remove the '#' at the start of the line to filter on >1990
-} LIMIT 10
+} 
