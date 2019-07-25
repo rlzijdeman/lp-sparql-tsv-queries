@@ -3,10 +3,8 @@
 #+ method: GET
 #+ pagination: 100
 #+ tags:
-#+   - WHGazetteer
-#+   - Linked Places
-#+   - CSHAPES
-#+   - druid.daalegend.net
+#+   - country level
+#+   - global data
 
 # for format see: https://github.com/LinkedPasts/linked-places/blob/master/tsv.md
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
