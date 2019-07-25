@@ -10,8 +10,12 @@ To download the results, click the download button in the lower right corner of 
 To change the format of the results into json or text/html, set the appropriate response type and hit 'execute' again.
 
 Obviously, all of this can automatically be retrieved via CURL or REQUEST, in this case respectively:
-'''curl -X GET "http://grlc.io/api/rlzijdeman/lp-sparql-tsv-queries/lp-cshapes-query?endpoint=https%3A%2F%2Fapi.druid.datalegend.net%2Fdatasets%2Fnlgis%2Fcshapes%2Fservices%2Fcshapes%2Fsparql" -H "accept: text/csv"'''
+'''
+curl -X GET "http://grlc.io/api/rlzijdeman/lp-sparql-tsv-queries/lp-cshapes-query?endpoint=https%3A%2F%2Fapi.druid.datalegend.net%2Fdatasets%2Fnlgis%2Fcshapes%2Fservices%2Fcshapes%2Fsparql" -H "accept: text/csv"
+'''
 
-'''http://grlc.io/api/rlzijdeman/lp-sparql-tsv-queries/lp-cshapes-query?endpoint=https%3A%2F%2Fapi.druid.datalegend.net%2Fdatasets%2Fnlgis%2Fcshapes%2Fservices%2Fcshapes%2Fsparql'''
+'''
+http://grlc.io/api/rlzijdeman/lp-sparql-tsv-queries/lp-cshapes-query?endpoint=https%3A%2F%2Fapi.druid.datalegend.net%2Fdatasets%2Fnlgis%2Fcshapes%2Fservices%2Fcshapes%2Fsparql
+'''
 
 For more info on grlc, visit the [website](http://grlc.io) or github [repo](https://github.com/CLARIAH/grlc).
