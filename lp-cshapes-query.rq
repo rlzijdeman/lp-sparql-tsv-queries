@@ -5,6 +5,7 @@
 #+ tags:
 #+   - country level
 #+   - global data
+#+   - post WWII
 
 # for format see: https://github.com/LinkedPasts/linked-places/blob/master/tsv.md
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
