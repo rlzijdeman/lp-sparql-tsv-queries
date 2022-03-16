@@ -18,4 +18,5 @@ curl -X GET "http://grlc.io/api/rlzijdeman/lp-sparql-tsv-queries/lp-cshapes-quer
 http://grlc.io/api/rlzijdeman/lp-sparql-tsv-queries/lp-cshapes-query?endpoint=https%3A%2F%2Fapi.druid.datalegend.net%2Fdatasets%2Fnlgis%2Fcshapes%2Fservices%2Fcshapes%2Fsparql
 ```
 
+There is also an example python script to show how to retrieve data from a SPARQL endpoint in LP tsv format.
 For more info on grlc, visit the [website](http://grlc.io) or github [repo](https://github.com/CLARIAH/grlc).
