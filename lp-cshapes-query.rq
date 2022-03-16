@@ -14,6 +14,8 @@ PREFIX iisgv: <https://iisg.amsterdam/vocab/>
 PREFIX iisgd: <https://iisg.amsterdam/dataset/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
 SELECT ?id ?title ?geom_source ?ccodes ?min ?max ?citation WHERE {
   
   # MUST-HAVE VARIABLES
@@ -28,7 +30,7 @@ SELECT ?id ?title ?geom_source ?ccodes ?min ?max ?citation WHERE {
   
   # SOURCE VARIABLES
   # not sure how 'id' and 'title' would differ from the ones above
-  BIND("https://druid.datalegend.net/nlgis/cshapes/"^^xsd:anyURI as ?citation)
+  BIND("https://icr.ethz.ch/data/cshapes/"^^xsd:anyURI as ?citation)
   
   # FILTER regex(str(?countryLabel), "^N", "i") # remove the '#' filter on countries starting with 'N' 
   # FILTER (?startCountry > "1990-01-01"^^xsd:date) # remove the '#' at the start of the line to filter on >1990
